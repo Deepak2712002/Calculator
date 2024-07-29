@@ -1,32 +1,40 @@
-# Prerequisites
-*.d
+# include <iostream>
+using namespace std;
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+int main() {
 
-# Precompiled Headers
-*.gch
-*.pch
+  char op;
+  float num1, num2;
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+  cout << "Enter operator: +, -, *, /: ";
+  cin >> op;
 
-# Fortran module files
-*.mod
-*.smod
+  cout << "Enter two operands: ";
+  cin >> num1 >> num2;
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+  switch(op) {
 
-# Executables
-*.exe
-*.out
-*.app
+    case '+':
+      cout << num1 << " + " << num2 << " = " << num1 + num2;
+      break;
+
+    case '-':
+      cout << num1 << " - " << num2 << " = " << num1 - num2;
+      break;
+
+    case '*':
+      cout << num1 << " * " << num2 << " = " << num1 * num2;
+      break;
+
+    case '/':
+      cout << num1 << " / " << num2 << " = " << num1 / num2;
+      break;
+
+    default:
+      // If the operator is other than +, -, * or /, error message is shown
+      cout << "Error! operator is not correct";
+      break;
+  }
+
+  return 0;
+}
